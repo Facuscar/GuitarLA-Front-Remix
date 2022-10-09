@@ -1,6 +1,7 @@
 import {
     Meta,
-    Links
+    Links,
+    Outlet
 } from '@remix-run/react'
 import styles from './styles/index.css'
 
@@ -42,7 +43,7 @@ export const links = () => {
 export default function App() {
     return (
         <Document>
-            <h1>Hello, world!</h1>
+            <Outlet />
         </Document>
     );
 }
