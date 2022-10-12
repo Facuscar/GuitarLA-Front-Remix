@@ -1,3 +1,11 @@
+export const loader = async () => {
+    const response = await fetch(`${process.env.API_URL}/guitarras?populate=image`); 
+    const result = await response.json();
+    console.log(result);
+    return {
+    }
+}
+
 
 const Store = () => {
     return (
