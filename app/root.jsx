@@ -57,7 +57,6 @@ const Document = ({children}) => {
     return (
         <html lang="es">
             <head>
-                <title>GuitarLA - Remix</title>
                 <Meta />
                 <Links />
             </head>
