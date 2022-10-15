@@ -4,6 +4,8 @@ import {
     Outlet,
     Scripts,
     LiveReload,
+    useCatch,
+    Link
 } from '@remix-run/react'
 
 import styles from '~/styles/index.css'
@@ -70,4 +72,25 @@ const Document = ({children}) => {
             </body>
         </html>
     )
+}
+
+export const CatchBoundary = () => {
+    const error = useCatch();
+    return (
+        <Document>
+            <p className='error'>
+                {error.status} {error.statusText}
+                <Link to="/" className='error-link'>You can return to the main page</Link>
+            </p>
+        </Document>
+    )
+}
+
+export const ErrorBoundary = ({ error }) => {
+    <Document>
+            <p className='error'>
+                {error.status} {error.statusText}
+                <Link to="/" className='error-link'>You can return to the main page</Link>
+            </p>
+    </Document>
 }
