@@ -16,10 +16,6 @@
     }
 }
 
-.post { 
-
-}
-
 .post .content {
     padding: 1.5rem;
 }
@@ -42,4 +38,9 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
+}
+
+.post .date {
+    font-size: 1.6rem;
+    color: var(--primary);
 }
