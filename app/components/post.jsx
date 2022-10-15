@@ -4,8 +4,8 @@ const Post = ({ post }) => {
     const { content, image, title, url, publishedAt } = post;
 
     return (
-        <article>
-            <img src={image.data.attributes.formats.small.url} alt={`Blog image ${title}`} className="image"/>
+        <article className="post">
+            <img src={image.data.attributes.formats.small.url} alt={`Blog of ${title}`} className="image"/>
             <div className="content">
                 <h3>{title}</h3>
                 <p className="date">{publishedAt}</p>
