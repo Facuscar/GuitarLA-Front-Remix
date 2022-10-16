@@ -16,6 +16,12 @@
     }
 }
 
+.post {
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
 .post .content {
     padding: 1.5rem;
 }
