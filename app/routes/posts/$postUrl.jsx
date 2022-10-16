@@ -42,7 +42,6 @@ const Post = () => {
     const post = useLoaderData();
     
     const { title, content, image, publishedAt } = post.data[0]?.attributes;
-    console.log(title);
 
     return (
         <article className="container post">

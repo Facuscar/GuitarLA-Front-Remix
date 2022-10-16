@@ -1,6 +1,6 @@
 import { useLoaderData } from "@remix-run/react";
 import { getGuitars } from "~/models/guitars.server";
-import Guitar from "~/components/guitar";
+import GuitarList from "~/components/guitar-list";
 import styles from '~/styles/guitars.css'
 
 export const links = () => {
@@ -29,17 +29,7 @@ const Store = () => {
     const { data } = useLoaderData();
     return (
         <main className="container">
-            <h2 className="heading">Our collection</h2>
-            {data?.length && (
-                <div className="guitar_grid">
-                    {data.map( guitar => (
-                        <Guitar 
-                            key={guitar.id}
-                            guitar={guitar}
-                        />
-                    ))}
-                </div>
-            )}
+            <GuitarList guitars={data}/>
         </main>
     );
 }
