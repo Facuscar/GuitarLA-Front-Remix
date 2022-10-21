@@ -40,6 +40,20 @@ const Guitar = () => {
                 <h3>{name}</h3>
                 <p className="text">{description}</p>
                 <p className="price">{price}</p>
+
+                <form action="" className="form">
+                    <label htmlFor="amount">Amount</label>
+                    <select name="" id="amount">
+                        <option value="">--- SELECT ---</option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                    </select>
+
+                    <input type="submit" value={'Add to chart'}/>
+                </form>
             </div>
         </div>
     );
