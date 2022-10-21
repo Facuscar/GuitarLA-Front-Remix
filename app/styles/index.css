@@ -62,6 +62,7 @@ main {
 
 .header .nav {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -85,6 +86,10 @@ main {
 
 .header .nav a:hover, .header .nav a.active {
   background-color: var(--primary);
+}
+
+.header .nav img {
+  width: 3rem;
 }
 
 .footer {
@@ -111,6 +116,10 @@ main {
   .footer .nav {
     flex-direction: row;
   }
+}
+
+.footer .nav a:last-of-type {
+  display: none;
 }
 
 .footer .nav a, .footer .copyright {
