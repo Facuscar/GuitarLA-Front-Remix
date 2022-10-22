@@ -38,10 +38,18 @@ const Guitar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target);
+
         if(Number(amountRef.current.value) === 0) {
             alert('You must select an amount');
             return;
+        }
+
+        const selectedGuitar = {
+            id: guitar.data[0].id,
+            image: image.data.attributes.url,
+            name,
+            price,
+            amount: amountRef.current.value,
         }
     }
     return (
