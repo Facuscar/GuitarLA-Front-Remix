@@ -53,7 +53,17 @@ export default function App() {
     const [cart, setCart] = useState([]);
 
     const addToCart = (guitar) => {
-        setCart((cart) => ( [...cart, guitar] ))
+        setCart((cart) => {
+            if(cart.some(guitarState => guitarState.id === guitar.id)) {
+              return cart.map(guitarState => {
+                if(guitarState.id === guitar.id) {
+                    guitarState.amount += guitar.amount;
+                }
+                return guitarState;
+              });
+            }
+            return [...cart, guitar];
+        })
     }
     return (
         <Document>

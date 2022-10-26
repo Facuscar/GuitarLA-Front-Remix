@@ -50,7 +50,7 @@ const Guitar = () => {
             image: image.data.attributes.url,
             name,
             price,
-            amount: amountRef.current.value,
+            amount: Number(amountRef.current.value),
         }
 
         addToCart(selectedGuitar);
