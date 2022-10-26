@@ -1,4 +1,4 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet, useOutletContext } from "@remix-run/react";
 import styles from '~/styles/guitars.css'
 
 export const links = () => {
@@ -13,7 +13,9 @@ export const links = () => {
 const Store = () => {
     return (
         <main className="container">
-            <Outlet />
+            <Outlet 
+                context={useOutletContext()}
+            />
         </main>
     );
 }
