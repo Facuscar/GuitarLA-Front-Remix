@@ -1,6 +1,5 @@
 const Course = ({course}) => {
     const { content, image, Title } = course.attributes;
-    console.log(course.attributes);
 
     return (
         <section className="course">
