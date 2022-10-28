@@ -18,7 +18,7 @@ export const meta = () => {
 }
 
 const Cart = () => {
-    const { cart } = useOutletContext();
+    const { cart, updateAmount } = useOutletContext();
 
     return (
         <main className="container">
@@ -36,7 +36,10 @@ const Cart = () => {
                                 <div>
                                     <p className="name">{guitar.name}</p>
                                     <p>Amount: {guitar.amount}</p>
-                                    <select name="" value={guitar.amount} className='select'>
+                                    <select name="" value={guitar.amount} className='select' onChange={ (e) => updateAmount({
+                                        amount: +e.target.value,
+                                        id: guitar.id
+                                    }) }>
                                         <option value="0">--- SELECT ---</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>

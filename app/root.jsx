@@ -65,12 +65,26 @@ export default function App() {
             return [...cart, guitar];
         })
     }
+
+    const updateAmount = (guitar) => {
+        const updatedCart = cart.map(guitarState => {
+            if (guitarState.id === guitar.id) {
+                guitarState.amount = guitar.amount;
+            }
+
+            return guitarState;
+        })
+
+        setCart(updatedCart);
+    }
+
     return (
         <Document>
             <Outlet 
                 context={{
                     addToCart,
-                    cart
+                    cart,
+                    updateAmount,
                 }}
             />
         </Document>
