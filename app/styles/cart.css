@@ -52,3 +52,12 @@
 .subtotal {
     font-size: 2.2rem;
 }
+
+.select {
+    all: unset;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    display: block;
+    padding: .5rem;
+    border-radius: 1rem;
+}
