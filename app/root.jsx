@@ -78,6 +78,12 @@ export default function App() {
         setCart(updatedCart);
     }
 
+    const deleteGuitar = (id) => {
+        setCart(cart => {
+            return cart.filter( (guitar) => guitar.id != id)
+        });
+    }
+
     return (
         <Document>
             <Outlet 
@@ -85,6 +91,7 @@ export default function App() {
                     addToCart,
                     cart,
                     updateAmount,
+                    deleteGuitar,
                 }}
             />
         </Document>

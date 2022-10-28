@@ -20,7 +20,7 @@ export const meta = () => {
 
 const Cart = () => {
     const [total, setTotal] = useState(0);
-    const { cart, updateAmount } = useOutletContext();
+    const { cart, updateAmount, deleteGuitar } = useOutletContext();
 
     useEffect(() => {
         setTotal(cart.reduce((total, guitar) => total + (guitar.amount * guitar.price), 0));
@@ -57,6 +57,7 @@ const Cart = () => {
                                     <p className="price">$ <span>{guitar.price}</span></p>
                                     <p className="subtotal">Subtotal: $ <span>{guitar.amount * guitar.price}</span></p>
                                 </div>
+                                <button type="button" className="btn_delete" onClick={() => deleteGuitar(guitar.id)}>X</button>
                             </div>
                         ))
                     )}
