@@ -33,8 +33,8 @@ const Cart = () => {
                 <div className="cart">
                     <h2>Articles</h2>
 
-                    {cart.length === 0 ? 'Empty cart' : (
-                        cart.map( guitar => (
+                    {cart?.length === 0 ? 'Empty cart' : (
+                        cart?.map( guitar => (
                             <div key={guitar.id} className="product">
                                 <div>
                                     <img src={guitar.image} alt={`Guitar ${guitar.name} in a white background`} />
