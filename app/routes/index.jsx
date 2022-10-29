@@ -27,8 +27,11 @@ export const links = () => {
 }
 
 export const meta = () => {
+    return {
+        title: 'GuitarLA - Main page',
+        description: 'GuitarLA store - Main page',
+    }
 }
-
 export const loader = async () => {
 
     const [guitars, posts, course] = await Promise.all([getGuitars(), getPosts(), getCourse()]);
